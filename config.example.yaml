@@ -1,0 +1,25 @@
+# GitOps Auto-Deployer Configuration Example
+
+webhook:
+  # Secret token shared with Git provider for HMAC-SHA256 verification (X-Hub-Signature-256)
+  secret: "your_webhook_secret_here"
+
+deploy:
+  # Path to the repository containing code and docker-compose.yml
+  repo_path: "e:/Code/gitops_deployer"
+
+notifications:
+  # Active notification targets to dispatch ("telegram", "n8n")
+  active_targets:
+    - "telegram"
+    - "n8n"
+
+  telegram:
+    # Telegram Bot Token from @BotFather
+    bot_token: "YOUR_TELEGRAM_BOT_TOKEN"
+    # Target chat ID or channel ID
+    chat_id: "YOUR_TELEGRAM_CHAT_ID"
+
+  n8n:
+    # Webhook endpoint URL on n8n
+    webhook_url: "https://n8n.example.com/webhook/gitops-deploy"
