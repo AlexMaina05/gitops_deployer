@@ -40,5 +40,6 @@ dependencies = [
 Homepage = "https://alexmaina.dev/"
 Repository = "https://github.com/AlexMaina05/gitops_deployer"
 Documentation = "https://github.com/AlexMaina05/gitops_deployer#readme"
+DOI = "https://doi.org/10.5281/zenodo.23692700"
 "Bug Tracker" = "https://github.com/AlexMaina05/gitops_deployer/issues"
 "Author Bio" = "https://bio.alexmaina.dev/"

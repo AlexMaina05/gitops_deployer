@@ -1,10 +1,14 @@
 # 🚀 GitOps Auto-Deployer
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23692700.svg)](https://doi.org/10.5281/zenodo.23692700)
+[![CI](https://github.com/AlexMaina05/gitops_deployer/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexMaina05/gitops_deployer/actions/workflows/ci.yml)
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)](https://fastapi.tiangolo.com/)
 [![Docker Compose](https://img.shields.io/badge/Docker%20Compose-v2-2496ED.svg)](https://docs.docker.com/compose/)
 [![Tests](https://img.shields.io/badge/tests-118%20passed-brightgreen.svg)]()
 [![Security](https://img.shields.io/badge/HMAC--SHA256-Strict-orange.svg)]()
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0003--7003--7247-green.svg)](https://orcid.org/0009-0003-7003-7247)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Un microservizio snello, asincrono e ad alta affidabilità sviluppato in **Python** con **FastAPI** e **Uvicorn**, progettato per automatizzare il deployment continuo (*Continuous Deployment*) di stack applicativi containerizzati su server e virtual machine self-hosted.
 
@@ -203,3 +207,33 @@ Per ambienti di produzione reali (server Linux Ubuntu/Debian):
 - **Reverse Proxy**: Esponi il servizio su Internet esclusivamente tramite **Nginx** o **Caddy** con certificati SSL/TLS validi (Let's Encrypt), rate limiting e timeout estesi per il completamento dei download Docker.
 
 *Per i file di configurazione pronti al copia-incolla per systemd, Nginx, Caddy e Docker Compose, consulta la [Guida al Deployment e alla Gestione in Produzione](./docs/deploy.md).*
+
+---
+
+## 📚 Citazione Accademica & Zenodo DOI
+
+Se utilizzi questo software o la sua architettura nei tuoi progetti di ricerca, homelab o tesi di laurea, cita il software utilizzando i seguenti metadati (disponibili anche in formato [`CITATION.cff`](./CITATION.cff)):
+
+```bibtex
+@software{mainardi2026gitops,
+  author       = {Alessandro Mainardi},
+  title        = {AlexMaina05/gitops_deployer: v1.0.0},
+  month        = oct,
+  year         = 2026,
+  publisher    = {Zenodo / CERN},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.23692700},
+  url          = {https://doi.org/10.5281/zenodo.23692700},
+  institution  = {Alma Mater Studiorum - Università di Bologna}
+}
+```
+
+- **DOI:** [10.5281/zenodo.23692700](https://doi.org/10.5281/zenodo.23692700)
+- **Autore:** [Alessandro Mainardi](https://alexmaina.dev/) (ORCID: [0009-0003-7003-7247](https://orcid.org/0009-0003-7003-7247), Wikidata: [Q141886579](https://www.wikidata.org/wiki/Q141886579))
+- **Affiliazione:** DISI — Alma Mater Studiorum Università di Bologna
+
+---
+
+## 📄 Licenza
+
+Rilasciato sotto licenza open source **[MIT License](./LICENSE)**. Copyright © 2026 Alessandro Mainardi.

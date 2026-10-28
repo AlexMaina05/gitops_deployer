@@ -1,0 +1,39 @@
+name: CI & Test Suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run Pytest & Type Checks
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true
+
+      - name: Setup Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install Dependencies
+        run: |
+          uv pip install --system -r requirements.txt
+          uv pip install --system pytest pytest-asyncio anyio httpx
+
+      - name: Run Test Suite (118 Tests)
+        env:
+          PYTHONPATH: .
+        run: |
+          pytest -v --maxfail=1
