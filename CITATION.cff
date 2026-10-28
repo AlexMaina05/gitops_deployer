@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Mainardi"
+    given-names: "Alessandro"
+    orcid: "https://orcid.org/0009-0003-7003-7247"
+    affiliation: "Alma Mater Studiorum - Università di Bologna"
+title: "gitops_deployer: Automated GitOps Continuous Deployment Engine and HMAC-Authenticated Microservice"
+version: 1.0.0
+doi: 10.5281/zenodo.23692700
+date-released: 2026-10-27
+url: "https://github.com/AlexMaina05/gitops_deployer"
+license: MIT

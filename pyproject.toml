@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitops-deployer"
+version = "1.0.0"
+description = "Automated GitOps continuous deployment engine and HMAC-authenticated webhook microservice for containerized workloads."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Alessandro Mainardi", email = "maina@alexmaina.dev" }
+]
+keywords = [
+  "gitops", "deployment", "continuous-delivery", "fastapi", "docker-compose",
+  "webhook", "hmac", "zero-trust", "automation", "cloud"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Installation/Setup",
+  "Topic :: System :: Systems Administration"
+]
+dependencies = [
+  "fastapi>=0.100.0",
+  "uvicorn>=0.23.0",
+  "pydantic>=2.0.0",
+  "pyyaml>=6.0",
+  "httpx>=0.24.0"
+]
+
+[project.urls]
+Homepage = "https://alexmaina.dev/"
+Repository = "https://github.com/AlexMaina05/gitops_deployer"
+Documentation = "https://github.com/AlexMaina05/gitops_deployer#readme"
+"Bug Tracker" = "https://github.com/AlexMaina05/gitops_deployer/issues"
+"Author Bio" = "https://bio.alexmaina.dev/"

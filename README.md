@@ -78,7 +78,7 @@ gitops_deployer/
 ### 1. Clonazione e Setup dell'Ambiente Virtuale
 ```bash
 # Clona il repository sul tuo server o macchina locale
-git clone https://github.com/tuo-account/gitops_deployer.git
+git clone https://github.com/AlexMaina05/gitops_deployer.git
 cd gitops_deployer
 
 # Crea l'ambiente virtuale dedicato
