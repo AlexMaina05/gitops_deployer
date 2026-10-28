@@ -8,9 +8,10 @@ on:
 
 jobs:
   test:
-    name: Run Pytest & Type Checks
+    name: Test (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.11", "3.12"]
 
@@ -18,22 +19,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v5
-        with:
-          version: "latest"
-          enable-cache: true
-
       - name: Setup Python ${{ matrix.python-version }}
-        run: uv python install ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
 
       - name: Install Dependencies
         run: |
-          uv pip install --system -r requirements.txt
-          uv pip install --system pytest pytest-asyncio anyio httpx
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio anyio httpx
 
       - name: Run Test Suite (118 Tests)
         env:
           PYTHONPATH: .
         run: |
-          pytest -v --maxfail=1
+          python -m pytest -v
